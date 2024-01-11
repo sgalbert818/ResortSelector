@@ -1,0 +1,107 @@
+header {
+    text-align: center;
+    margin: 50px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
+button {
+    height: 50px;
+    width: 80px;
+    margin: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.item-container {
+    width: 90%;
+    height: 290px;
+    margin: 50px auto;
+    display: flex;
+    border: 1px solid black;
+    padding: 10px 20px;
+    box-shadow: 0 0 5px rgb(106, 106, 106);
+    border-radius: 10px;
+}
+
+.resort-img {
+    height: 270px;
+    width: 270px;
+    margin: auto 25px auto 0;
+}
+
+.resort-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 5px rgb(106, 106, 106);
+    border-radius: 5%;
+}
+
+.info {
+    height: 280px;
+    width: 90%;
+    margin: auto 0;
+}
+
+.name {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.report {
+    width: 100%;
+    height: 225px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.temperature, .snow, .traffic {
+    width: 25%;
+    height: 100%;
+    border: 1px solid black;
+    box-shadow: 0 0 5px rgb(106, 106, 106);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    letter-spacing: 0.3px;
+    line-height: 25px;
+    border-radius: 10px;
+}
+
+.traffic {
+    width: 45%;
+}
+
+.temperature h4, .snow h4, .traffic h4 {
+    margin: 0;
+    padding: 15px;
+}
+
+.traffictest {
+    height: 200px;
+    width: 50%;
+    border: 1px solid red;
+}
+
+.test {
+    height: 100%;
+    width: 100%;
+}
