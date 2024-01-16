@@ -27,7 +27,7 @@ h2 {
 
 .item-container {
     width: 90%;
-    height: 290px;
+    height: 450px;
     margin: 50px auto;
     display: flex;
     border: 1px solid black;
@@ -37,9 +37,9 @@ h2 {
 }
 
 .resort-img {
-    height: 270px;
-    width: 270px;
-    margin: auto 25px auto 0;
+    height: 420px;
+    width: 450px;
+    margin: auto 25px auto 10px;
 }
 
 .resort-img img {
@@ -50,7 +50,7 @@ h2 {
 }
 
 .info {
-    height: 280px;
+    height: 420px;
     width: 90%;
     margin: auto 0;
 }
@@ -67,14 +67,17 @@ h2 {
 .report {
     width: 100%;
     height: 225px;
-    display: flex;
-    justify-content: space-between;
     margin-top: 5px;
 }
 
+.weather-report {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 16px 0;
+}
+
 .temperature, .snow, .traffic {
-    width: 25%;
-    height: 100%;
     border: 1px solid black;
     box-shadow: 0 0 5px rgb(106, 106, 106);
     display: flex;
@@ -84,13 +87,22 @@ h2 {
     line-height: 20px;
 }
 
+.temperature, .snow {
+    width: 48%;
+    height: 130px;
+}
+
 .traffic {
-    width: 45%;
+    width: 100%;
+    height: 207px;
+    margin: 10px 20px 0 0;
 }
 
 .temperature h4, .snow h4, .traffic h4 {
     margin: 0;
     padding: 15px;
+    font-size: 14px;
+    line-height: 15px;
 }
 
 .map-box {

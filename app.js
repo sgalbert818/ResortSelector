@@ -116,6 +116,8 @@ filterResorts(resorts);
 let autocomplete;
 let origin;
 
+fetchWeatherData(resorts,'ChIJ-aZvBIx8bIcR7i3wmqqdTtA')
+
 function filterResorts(obj) {
     for (i = 0; i < obj.length; i++) {
         let values = (Object.values(obj[i]));
@@ -191,11 +193,13 @@ function fetchWeatherData(obj, startLocation) {
                     <h2>${obj[i].title}</h2>
                 </div>
                 <div class="report">
-                    <div class="temperature">
-                        <h4>Weather Report<br><br>Max Temperature: ${Math.round(obj[i].maxtemp * (9 / 5) + 32)}°F<br>Min Temperature: ${Math.round(obj[i].mintemp * (9 / 5) + 32)}°F<br>Conditions: ${obj[i].conditions}</h4>
-                    </div>
-                    <div class="snow">
-                        <h4>24 hour Snow Report<br><br>${Math.round(obj[i].snow / 2.54)} inches</h4>
+                    <div class="weather-report">
+                        <div class="temperature">
+                            <h4>Weather Report<br><br>Max Temperature: ${Math.round(obj[i].maxtemp * (9 / 5) + 32)}°F<br>Min Temperature: ${Math.round(obj[i].mintemp * (9 / 5) + 32)}°F<br>Conditions: ${obj[i].conditions}</h4>
+                        </div>
+                        <div class="snow">
+                            <h4>24 hour Snow Report<br><br>${Math.round(obj[i].snow / 2.54)} inches</h4>
+                        </div>
                     </div>
                     <div class="traffic">
                         <div id=${obj[i].marker} class="map-box">
