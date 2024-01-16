@@ -140,6 +140,7 @@ function initAutocomplete() {
 submit.addEventListener('click', submitClick);
 
 function submitClick() {
+    container.innerHTML = '';
     origin = autocomplete.getPlace().place_id;
     fetchWeatherData(resorts, origin);
 }
