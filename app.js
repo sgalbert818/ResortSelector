@@ -116,8 +116,6 @@ filterResorts(resorts);
 let autocomplete;
 let origin;
 
-fetchWeatherData(resorts,'ChIJ-aZvBIx8bIcR7i3wmqqdTtA')
-
 function filterResorts(obj) {
     for (i = 0; i < obj.length; i++) {
         let values = (Object.values(obj[i]));
@@ -165,7 +163,6 @@ ikonBtn.addEventListener('click', function () {
 
 
 function fetchWeatherData(obj, startLocation) {
-    console.log(startLocation);
     for (let i = 0; i < obj.length; i++) {
 
         fetch(obj[i].fetchLink, {
