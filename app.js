@@ -185,10 +185,16 @@ function fetchWeatherData(obj, startLocation) {
             return response.json();
 
         }).then(response => {
+            let test;
             obj[i].maxtemp = response.days[0].tempmax;
             obj[i].mintemp = response.days[0].tempmin;
             obj[i].conditions = response.days[0].conditions;
             obj[i].snow = response.days[0].snow;
+            if (Math.round(obj[i].snow / 2.54) == 1) {
+                obj[i].snow = (Math.round(obj[i].snow / 2.54) + ' inch')
+            } else {
+                obj[i].snow = (Math.round(obj[i].snow / 2.54) + ' inches')
+            }
 
             container.innerHTML += (`<div class="item-container">
             <div class="resort-img">
@@ -204,7 +210,7 @@ function fetchWeatherData(obj, startLocation) {
                             <h4>Weather Report<br><br>Max Temperature: ${Math.round(obj[i].maxtemp * (9 / 5) + 32)}°F<br>Min Temperature: ${Math.round(obj[i].mintemp * (9 / 5) + 32)}°F<br>Conditions: ${obj[i].conditions}</h4>
                         </div>
                         <div class="snow">
-                            <h4>24 hour Snow Report<br><br>${Math.round(obj[i].snow / 2.54)} inches</h4>
+                            <h4>24 hour Snow Report<br><br>${obj[i].snow}</h4>
                         </div>
                     </div>
                     <div class="traffic">
