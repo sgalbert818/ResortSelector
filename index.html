@@ -28,7 +28,9 @@
         </div>
     </form>
     <div class="container">
-        <!-- <div class="item-container">
+
+<!--
+        <div class="item-container">
             <div class="resort-img">
                 <img src="images/keystone.jpg">
             </div>
@@ -37,18 +39,25 @@
                     <h2>Keystone - Keystone, Colorado</h2>
                 </div>
                 <div class="report">
-                    <div class="temperature">
-                        <h4>Temperature report</h4>
-                    </div>
-                    <div class="snow">
-                        <h4>Snow report</h4>
+                    <div class="weather-report">
+                        <div class="temperature">
+                            <h4>Weather Report<br><br>Max Temperature: 25°F<br>Min Temperature: 12°F<br>Conditions: Overcast</h4>
+                        </div>
+                        <div class="snow">
+                            <h4>24 hour Snow Report<br><br>3 inches</h4>
+                        </div>
                     </div>
                     <div class="traffic">
-                        <h4>Traffic report</h4>
+                        <div id=${obj[i].marker} class="map-box">
+                        <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/directions?origin=39.468,-105.924&destination=39.014,-105.302&key=AIzaSyB2RrRBsMP2YXKOav-FhbI1utuoIpMgzjQ"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
+    -->
+
+
     </div>
     <script src="app.js"></script>
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2RrRBsMP2YXKOav-FhbI1utuoIpMgzjQ&libraries=places&callback=initAutocomplete"></script>

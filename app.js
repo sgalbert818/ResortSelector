@@ -111,10 +111,12 @@ const submit = document.querySelector('#address-submit');
 
 let epicResorts = [];
 let ikonResorts = [];
-
-filterResorts(resorts);
 let autocomplete;
 let origin;
+
+// set up filter buttons
+
+filterResorts(resorts);
 
 function filterResorts(obj) {
     for (i = 0; i < obj.length; i++) {
@@ -127,6 +129,8 @@ function filterResorts(obj) {
     }
 }
 
+// set up autocomplete address search
+
 function initAutocomplete() {
     autocomplete = new google.maps.places.Autocomplete(
         document.getElementById('autocomplete'),
@@ -137,6 +141,8 @@ function initAutocomplete() {
     );
 }
 
+// HTML mapping once address is submitted by user
+
 submit.addEventListener('click', submitClick);
 
 function submitClick() {
@@ -144,6 +150,8 @@ function submitClick() {
     origin = autocomplete.getPlace().place_id;
     fetchWeatherData(resorts, origin);
 }
+
+// resort filter button functionality
 
 allBtn.addEventListener('click', function () {
     container.innerHTML = '';
@@ -161,6 +169,7 @@ ikonBtn.addEventListener('click', function () {
     fetchWeatherData(ikonResorts, origin);
 })
 
+// HTML mapping functionality
 
 function fetchWeatherData(obj, startLocation) {
     for (let i = 0; i < obj.length; i++) {
