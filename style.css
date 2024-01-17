@@ -14,7 +14,8 @@ h2 {
 .filter-buttons {
     display: flex;
     justify-content: center;
-    height: 60px;
+    height: 70px;
+    padding-top: 30px;
 }
 
 .allbtn, .epicbtn, .ikonbtn {
@@ -121,20 +122,12 @@ iframe {
     justify-content: center;
 }
 
-.address-input label, .address-input input, #address-submit {
+.address-input label, .address-input input {
     margin: 0 5px;
 }
 
 .address-input input {
     width: 300px;
-}
-
-#address-submit {
-    border: 1px solid black;
-    cursor: pointer;
-    margin: 30px;
-    height: 20px;
-    width: 80px;
 }
 
 @media only screen and (max-width: 650px) {

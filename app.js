@@ -107,7 +107,6 @@ const container = document.querySelector('.container');
 const allBtn = document.querySelector('.allbtn');
 const epicBtn = document.querySelector('.epicbtn');
 const ikonBtn = document.querySelector('.ikonbtn');
-const submit = document.querySelector('#address-submit');
 const filterBtns = document.querySelector('.filter-buttons');
 
 let epicResorts = [];
@@ -140,19 +139,6 @@ function initAutocomplete() {
             fields: ['place_id', 'name']
         }
     );
-}
-
-// HTML mapping once address is submitted by user
-
-submit.addEventListener('click', submitClick);
-
-function submitClick() {
-    filterBtns.innerHTML = `<button class="allbtn" type="button">Display All</button>
-                            <button class="epicbtn" type="button">Epic Pass</button>
-                            <button class="ikonbtn" type="button">Ikon Pass</button>`
-    container.innerHTML = '';
-    origin = autocomplete.getPlace().place_id;
-    fetchWeatherData(resorts, origin);
 }
 
 // resort filter button functionality
