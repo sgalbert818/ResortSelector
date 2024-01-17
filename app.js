@@ -12,8 +12,8 @@ const resorts = [
         mintemp: '',
         conditions: '',
         snow: '',
-        latitude: 39.6046192,
-        longitude: -105.9538216,
+        latitude: 39.5815,
+        longitude: -105.94370,
         marker: 'Keystone',
         pass: 'epic',
     },
@@ -26,8 +26,8 @@ const resorts = [
         mintemp: '',
         conditions: '',
         snow: '',
-        latitude: 39.48018264770508,
-        longitude: -106.0665512084961,
+        latitude: 39.48005,
+        longitude: -106.07187,
         marker: 'Breckenridge',
         pass: 'epic',
     },
@@ -40,8 +40,8 @@ const resorts = [
         mintemp: '',
         conditions: '',
         snow: '',
-        latitude: 39.8716143,
-        longitude: -105.7827088,
+        latitude: 39.86293,
+        longitude: -105.77874,
         marker: 'Winter Park',
         pass: 'ikon',
     },
@@ -54,8 +54,8 @@ const resorts = [
         mintemp: '',
         conditions: '',
         snow: '',
-        latitude: 39.50162887573242,
-        longitude: -106.15153503417969,
+        latitude: 39.50089,
+        longitude: -106.15563,
         marker: 'Copper',
         pass: 'ikon',
     },
@@ -68,8 +68,8 @@ const resorts = [
         mintemp: '',
         conditions: '',
         snow: '',
-        latitude: 39.642312,
-        longitude: -105.871685,
+        latitude: 39.63425,
+        longitude: -105.87144,
         marker: 'Arapahoe Basin',
         pass: 'ikon',
     },
@@ -82,8 +82,8 @@ const resorts = [
         mintemp: '',
         conditions: '',
         snow: '',
-        latitude: 39.9372203,
-        longitude: -105.58267,
+        latitude: 39.93734,
+        longitude: -105.58270,
         marker: 'Eldora',
         pass: 'ikon',
     },
@@ -96,8 +96,8 @@ const resorts = [
         mintemp: '',
         conditions: '',
         snow: '',
-        latitude: 37.937,
-        longitude: -107.8123,
+        latitude: 37.91950,
+        longitude: -107.83673,
         marker: 'Telluride',
         pass: 'epic',
     },
@@ -108,6 +108,7 @@ const allBtn = document.querySelector('.allbtn');
 const epicBtn = document.querySelector('.epicbtn');
 const ikonBtn = document.querySelector('.ikonbtn');
 const submit = document.querySelector('#address-submit');
+const filterBtns = document.querySelector('.filter-buttons');
 
 let epicResorts = [];
 let ikonResorts = [];
@@ -146,6 +147,9 @@ function initAutocomplete() {
 submit.addEventListener('click', submitClick);
 
 function submitClick() {
+    filterBtns.innerHTML = `<button class="allbtn" type="button">Display All</button>
+                            <button class="epicbtn" type="button">Epic Pass</button>
+                            <button class="ikonbtn" type="button">Ikon Pass</button>`
     container.innerHTML = '';
     origin = autocomplete.getPlace().place_id;
     fetchWeatherData(resorts, origin);
