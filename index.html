@@ -6,59 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500&family=Montserrat:ital,wght@0,300;0,400;0,700;1,500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>Where should I ski today?</h1>
+        <img src="images/background.jpg" alt="mountains">
+        <h1>Ski Resort Selector</h1>
+        <form>
+            <div class="address-input">
+                <!--<label for="autocomplete">Enter address for traffic information: </label>-->
+                <input type="text" id="autocomplete" name="address" autocomplete="off" placeholder="Enter Address"
+                    required />
+            </div>
+        </form>
     </header>
-    <form>
-        <div class="address-input">
-            <label for="autocomplete">Enter address for traffic information: </label>
-            <input type="text" id="autocomplete" name="address" autocomplete="off" placeholder="123 Main Street"
-                required />
-        </div>
-    </form>
     <div class="filter-buttons">
+        <button class="epicbtn" type="button">
+            <img src="images/epic.jpg">
+        </button>
+        <button class="ikonbtn" type="button">
+            <img src="images/ikon.png">
+        </button>
         <button class="allbtn" type="button">Display All</button>
-        <button class="epicbtn" type="button">Epic Pass</button>
-        <button class="ikonbtn" type="button">Ikon Pass</button>
     </div>
     <div class="container">
-
-
-        <!--<div class="item-container">
+        <div class="item-container">
             <div class="resort-img">
                 <img src="images/keystone.jpg">
-            </div>
-            <div class="info">
                 <div class="name">
                     <h2>Keystone - Keystone, Colorado</h2>
                 </div>
-                <div class="report">
-                    <div class="weather-report">
-                        <div class="temperature">
-                            <h4>Weather Report<br><br>Max Temperature: 25°F<br>Min Temperature: 12°F<br>Conditions: Overcast</h4>
-                        </div>
-                        <div class="snow">
-                            <h4>24 hour Snow Report<br><br>3 inches</h4>
-                        </div>
-                    </div>
-                    <div class="traffic">
-                        <div id=${obj[i].marker} class="map-box">
-                        <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/directions?origin=39.468,-105.924&destination=39.014,-105.302&key=AIzaSyB2RrRBsMP2YXKOav-FhbI1utuoIpMgzjQ"></iframe>
-                        </div>
-                    </div>
+            </div>
+            <div class="report">
+                <div class="temperature">
+                    <h4>Today's High: 25°F</h4>
+                    <h4>Today's Low: 12°F</h4>
+                    <h4>Conditions: Overcast, Partially Cloudy, Snow</h4>
+                </div>
+                <div class="snow">
+                    <h4>24 hour Snow Report</h4>
+                    <h4>3 inches</h4>
                 </div>
             </div>
-        </div>-->
-    
-
-
+            <div class="traffic">
+                <div id=${obj[i].marker} class="map-box">
+                    <iframe loading="lazy" allowfullscreen
+                        src="https://www.google.com/maps/embed/v1/directions?origin=39.468,-105.924&destination=39.014,-105.302&key=AIzaSyB2RrRBsMP2YXKOav-FhbI1utuoIpMgzjQ"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="app.js"></script>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2RrRBsMP2YXKOav-FhbI1utuoIpMgzjQ&libraries=places&callback=initAutocomplete"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2RrRBsMP2YXKOav-FhbI1utuoIpMgzjQ&libraries=places&callback=initAutocomplete"></script>
 </body>
 
 </html>

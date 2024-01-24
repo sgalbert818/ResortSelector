@@ -209,21 +209,29 @@ function initAutocomplete() {
             fields: ['place_id', 'name']
         }
     );
+    autocomplete.addListener('place_changed', onPlaceChanged);
+}
+
+function onPlaceChanged() {
+    filterBtns.style.display = 'flex';
 }
 
 // resort filter button functionality
 
 allBtn.addEventListener('click', function () {
+    container.style.display = 'block';
     container.innerHTML = '';
     origin = autocomplete.getPlace().place_id;
     fetchWeatherData(resorts, origin);
 })
 epicBtn.addEventListener('click', function () {
+    container.style.display = 'block';
     container.innerHTML = '';
     origin = autocomplete.getPlace().place_id;
     fetchWeatherData(epicResorts, origin);
 })
 ikonBtn.addEventListener('click', function () {
+    container.style.display = 'block';
     container.innerHTML = '';
     origin = autocomplete.getPlace().place_id;
     fetchWeatherData(ikonResorts, origin);
