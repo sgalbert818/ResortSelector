@@ -174,6 +174,7 @@ const resorts = [
 ];
 
 const container = document.querySelector('.container');
+const itemContainer = document.querySelector('.item-container');
 const allBtn = document.querySelector('.allbtn');
 const epicBtn = document.querySelector('.epicbtn');
 const ikonBtn = document.querySelector('.ikonbtn');
@@ -264,31 +265,54 @@ function fetchWeatherData(obj, startLocation) {
                 obj[i].snow = (Math.round(obj[i].snow / 2.54) + ' inches')
             }
 
-            container.innerHTML += (`<div class="item-container">
-            <div class="resort-img">
-                <img src=${obj[i].img}>
+            container.innerHTML +=
+                (`<div class="item-container">
+            <div class="section-top">
+                <h2>${obj[i].title}</h2>
             </div>
-            <div class="info">
-                <div class="name">
-                    <h2>${obj[i].title}</h2>
-                </div>
-                <div class="report">
-                    <div class="weather-report">
-                        <div class="temperature">
-                            <h4>Weather Report<br><br>Max Temperature: ${Math.round(obj[i].maxtemp * (9 / 5) + 32)}°F<br>Min Temperature: ${Math.round(obj[i].mintemp * (9 / 5) + 32)}°F<br>Conditions: ${obj[i].conditions}</h4>
+            <div class="section-bottom">
+                <div class="weather">
+                    <div class="outlook">
+                        <div class="left">
+                            <div class="text-top">
+                                <h4>outlook</h4>
+                            </div>
+                            <div class="text-bottom">
+                                <p>${obj[i].conditions}</p>
+                            </div>
                         </div>
-                        <div class="snow">
-                            <h4>24 hour Snow Report<br><br>${obj[i].snow}</h4>
+                        <div class="right">
+                            <img src="images/sun.png">
                         </div>
                     </div>
-                    <div class="traffic">
-                        <div id=${obj[i].marker} class="map-box">
-                        <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/directions?origin=place_id:${startLocation}&destination=${obj[i].latitude},${obj[i].longitude}&key=AIzaSyB2RrRBsMP2YXKOav-FhbI1utuoIpMgzjQ"></iframe>
+                    <div class="temperature">
+                        <div class="left">
+                            <div class="text-top">
+                                <h4>Temperature</h4>
+                            </div>
+                            <div class="text-bottom">
+                                <p>High of ${Math.round(obj[i].maxtemp * (9 / 5) + 32)}°F. Low of ${Math.round(obj[i].mintemp * (9 / 5) + 32)}°F.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="snow">
+                        <div class="left">
+                            <div class="text-top">
+                                <h4>snow</h4>
+                            </div>
+                            <div class="text-bottom">
+                                <p>24 hour snow report: ${obj[i].snow}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="traffic">
+                    <div id=${obj[i].marker} class="map-box">
+                        <iframe loading="lazy" zoom='5' allowfullscreen src="https://www.google.com/maps/embed/v1/directions?origin=place_id:${startLocation}&destination=${obj[i].latitude},${obj[i].longitude}&key=AIzaSyB2RrRBsMP2YXKOav-FhbI1utuoIpMgzjQ"></iframe>
+                    </div>
+                </div>
             </div>
-            </div>`);
+        </div>`);
 
         }).catch((errorResponse) => {
             if (errorResponse.text) {
