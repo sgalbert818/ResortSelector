@@ -17,7 +17,7 @@ const resorts = [
         longitude: -105.94370,
         marker: 'Keystone',
         pass: 'epic',
-        icon:'',
+        icon: '',
     },
     {
         id: 2,
@@ -33,7 +33,7 @@ const resorts = [
         longitude: -106.07187,
         marker: 'Breckenridge',
         pass: 'epic',
-        icon:'',
+        icon: '',
     },
     {
         id: 3,
@@ -49,7 +49,7 @@ const resorts = [
         longitude: -105.77874,
         marker: 'Winter Park',
         pass: 'ikon',
-        icon:'',
+        icon: '',
     },
     {
         id: 4,
@@ -65,7 +65,7 @@ const resorts = [
         longitude: -106.15563,
         marker: 'Copper',
         pass: 'ikon',
-        icon:'',
+        icon: '',
     },
     {
         id: 5,
@@ -81,7 +81,7 @@ const resorts = [
         longitude: -105.87144,
         marker: 'Arapahoe Basin',
         pass: 'ikon',
-        icon:'',
+        icon: '',
     },
     {
         id: 6,
@@ -97,7 +97,7 @@ const resorts = [
         longitude: -105.58270,
         marker: 'Eldora',
         pass: 'ikon',
-        icon:'',
+        icon: '',
     },
     {
         id: 7,
@@ -113,7 +113,7 @@ const resorts = [
         longitude: -107.83673,
         marker: 'Telluride',
         pass: 'epic',
-        icon:'',
+        icon: '',
     },
     {
         id: 8,
@@ -129,7 +129,7 @@ const resorts = [
         longitude: -106.96576,
         marker: 'Crested Butte',
         pass: 'epic',
-        icon:'',
+        icon: '',
     },
     {
         id: 9,
@@ -145,7 +145,7 @@ const resorts = [
         longitude: -106.77087,
         marker: 'Steamboat',
         pass: 'ikon',
-        icon:'',
+        icon: '',
     },
     {
         id: 10,
@@ -161,7 +161,7 @@ const resorts = [
         longitude: -106.94957,
         marker: 'Aspen',
         pass: 'ikon',
-        icon:'',
+        icon: '',
     },
     {
         id: 11,
@@ -177,7 +177,7 @@ const resorts = [
         longitude: -106.53159,
         marker: 'Beaver Creek',
         pass: 'epic',
-        icon:'',
+        icon: '',
     },
     {
         id: 12,
@@ -193,7 +193,7 @@ const resorts = [
         longitude: -106.35496,
         marker: 'Vail',
         pass: 'epic',
-        icon:'',
+        icon: '',
     },
 ];
 
@@ -208,6 +208,14 @@ let epicResorts = [];
 let ikonResorts = [];
 let autocomplete;
 let origin;
+
+function scrollTo(element) {
+    window.scroll({
+        behavior: 'smooth',
+        left: 0,
+        top: element.offsetTop - 50,
+    });
+}
 
 // set up filter buttons
 
@@ -283,7 +291,7 @@ function fetchWeatherData(obj, startLocation) {
             obj[i].mintemp = response.days[0].tempmin;
             obj[i].conditions = response.days[0].description;
             obj[i].feelslike = response.days[0].feelslike;
-            
+
             obj[i].icon = response.days[0].icon;
             if (obj[i].icon = 'partly-cloudy-day') {
                 obj[i].icon = 'images/partlycloudy.png';
@@ -355,6 +363,9 @@ function fetchWeatherData(obj, startLocation) {
                 </div>
             </div>
         </div>`);
+
+        scrollTo(container);
+
 
         }).catch((errorResponse) => {
             if (errorResponse.text) {
