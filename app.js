@@ -10,12 +10,14 @@ const resorts = [
         fetchLink: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/100%20Dercum%20Square%2C%20Keystone%2C%20CO%2080435?unitGroup=metric&key=VGSVU45QFY7FQ3T557YS85XR6&contentType=json",
         maxtemp: '',
         mintemp: '',
+        feelslike: '',
         conditions: '',
         snow: '',
         latitude: 39.5815,
         longitude: -105.94370,
         marker: 'Keystone',
         pass: 'epic',
+        icon:'',
     },
     {
         id: 2,
@@ -24,12 +26,14 @@ const resorts = [
         fetchLink: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/4%20Grandview%20Dr%2C%20Breckenridge%2C%20CO%2080424?unitGroup=metric&key=VGSVU45QFY7FQ3T557YS85XR6&contentType=json",
         maxtemp: '',
         mintemp: '',
+        feelslike: '',
         conditions: '',
         snow: '',
         latitude: 39.48005,
         longitude: -106.07187,
         marker: 'Breckenridge',
         pass: 'epic',
+        icon:'',
     },
     {
         id: 3,
@@ -38,12 +42,14 @@ const resorts = [
         fetchLink: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/110-148%20Fir%20Dr%2C%20Winter%20Park%2C%20CO%2080482?unitGroup=metric&key=VGSVU45QFY7FQ3T557YS85XR6&contentType=json",
         maxtemp: '',
         mintemp: '',
+        feelslike: '',
         conditions: '',
         snow: '',
         latitude: 39.86293,
         longitude: -105.77874,
         marker: 'Winter Park',
         pass: 'ikon',
+        icon:'',
     },
     {
         id: 4,
@@ -52,12 +58,14 @@ const resorts = [
         fetchLink: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/509%20Copper%20Rd%2C%20Frisco%2C%20CO%2080443?unitGroup=metric&key=VGSVU45QFY7FQ3T557YS85XR6&contentType=json",
         maxtemp: '',
         mintemp: '',
+        feelslike: '',
         conditions: '',
         snow: '',
         latitude: 39.50089,
         longitude: -106.15563,
         marker: 'Copper',
         pass: 'ikon',
+        icon:'',
     },
     {
         id: 5,
@@ -66,12 +74,14 @@ const resorts = [
         fetchLink: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/arapahoe%20basin%20colorado?unitGroup=metric&key=VGSVU45QFY7FQ3T557YS85XR6&contentType=json",
         maxtemp: '',
         mintemp: '',
+        feelslike: '',
         conditions: '',
         snow: '',
         latitude: 39.63425,
         longitude: -105.87144,
         marker: 'Arapahoe Basin',
         pass: 'ikon',
+        icon:'',
     },
     {
         id: 6,
@@ -80,12 +90,14 @@ const resorts = [
         fetchLink: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/eldora%20colorado?unitGroup=metric&key=VGSVU45QFY7FQ3T557YS85XR6&contentType=json",
         maxtemp: '',
         mintemp: '',
+        feelslike: '',
         conditions: '',
         snow: '',
         latitude: 39.93734,
         longitude: -105.58270,
         marker: 'Eldora',
         pass: 'ikon',
+        icon:'',
     },
     {
         id: 7,
@@ -94,12 +106,14 @@ const resorts = [
         fetchLink: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/telluride%20colorado?unitGroup=metric&key=VGSVU45QFY7FQ3T557YS85XR6&contentType=json",
         maxtemp: '',
         mintemp: '',
+        feelslike: '',
         conditions: '',
         snow: '',
         latitude: 37.91950,
         longitude: -107.83673,
         marker: 'Telluride',
         pass: 'epic',
+        icon:'',
     },
     {
         id: 8,
@@ -108,12 +122,14 @@ const resorts = [
         fetchLink: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/crested%20butte%20colorado?unitGroup=metric&key=VGSVU45QFY7FQ3T557YS85XR6&contentType=json",
         maxtemp: '',
         mintemp: '',
+        feelslike: '',
         conditions: '',
         snow: '',
         latitude: 38.89925,
         longitude: -106.96576,
         marker: 'Crested Butte',
         pass: 'epic',
+        icon:'',
     },
     {
         id: 9,
@@ -122,12 +138,14 @@ const resorts = [
         fetchLink: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/steamboat%20springs%20colorado?unitGroup=metric&key=VGSVU45QFY7FQ3T557YS85XR6&contentType=json",
         maxtemp: '',
         mintemp: '',
+        feelslike: '',
         conditions: '',
         snow: '',
         latitude: 40.45399,
         longitude: -106.77087,
         marker: 'Steamboat',
         pass: 'ikon',
+        icon:'',
     },
     {
         id: 10,
@@ -136,12 +154,14 @@ const resorts = [
         fetchLink: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/aspen%20colorado?unitGroup=metric&key=VGSVU45QFY7FQ3T557YS85XR6&contentType=json",
         maxtemp: '',
         mintemp: '',
+        feelslike: '',
         conditions: '',
         snow: '',
         latitude: 39.19225,
         longitude: -106.94957,
         marker: 'Aspen',
         pass: 'ikon',
+        icon:'',
     },
     {
         id: 11,
@@ -150,12 +170,14 @@ const resorts = [
         fetchLink: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/beaver%20creek%20colorado?unitGroup=metric&key=VGSVU45QFY7FQ3T557YS85XR6&contentType=json",
         maxtemp: '',
         mintemp: '',
+        feelslike: '',
         conditions: '',
         snow: '',
         latitude: 39.60184,
         longitude: -106.53159,
         marker: 'Beaver Creek',
         pass: 'epic',
+        icon:'',
     },
     {
         id: 12,
@@ -164,12 +186,14 @@ const resorts = [
         fetchLink: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/vail%20colorado?unitGroup=metric&key=VGSVU45QFY7FQ3T557YS85XR6&contentType=json",
         maxtemp: '',
         mintemp: '',
+        feelslike: '',
         conditions: '',
         snow: '',
         latitude: 39.60629,
         longitude: -106.35496,
         marker: 'Vail',
         pass: 'epic',
+        icon:'',
     },
 ];
 
@@ -257,7 +281,22 @@ function fetchWeatherData(obj, startLocation) {
             let test;
             obj[i].maxtemp = response.days[0].tempmax;
             obj[i].mintemp = response.days[0].tempmin;
-            obj[i].conditions = response.days[0].conditions;
+            obj[i].conditions = response.days[0].description;
+            obj[i].feelslike = response.days[0].feelslike;
+            
+            obj[i].icon = response.days[0].icon;
+            if (obj[i].icon = 'partly-cloudy-day') {
+                obj[i].icon = 'images/partlycloudy.png';
+            } else if (obj[i].icon = 'clear-day') {
+                obj[i].icon = 'images/sun.png';
+            } else if (obj[i].icon = 'snow') {
+                obj[i].icon = 'images/snow.png';
+            } else if (obj[i].icon = 'rain') {
+                obj[i].icon = 'images/rain.png';
+            } else {
+                obj[i].icon = 'images/cloud.png';
+            }
+
             obj[i].snow = response.days[0].snow;
             if (Math.round(obj[i].snow / 2.54) == 1) {
                 obj[i].snow = (Math.round(obj[i].snow / 2.54) + ' inch')
@@ -267,6 +306,9 @@ function fetchWeatherData(obj, startLocation) {
 
             container.innerHTML +=
                 (`<div class="item-container">
+                <div class="img-container">
+                <img src=${obj[i].img}>
+            </div>
             <div class="section-top">
                 <h2>${obj[i].title}</h2>
             </div>
@@ -282,7 +324,7 @@ function fetchWeatherData(obj, startLocation) {
                             </div>
                         </div>
                         <div class="right">
-                            <img src="images/sun.png">
+                            <img src=${obj[i].icon}>
                         </div>
                     </div>
                     <div class="temperature">
@@ -291,7 +333,7 @@ function fetchWeatherData(obj, startLocation) {
                                 <h4>Temperature</h4>
                             </div>
                             <div class="text-bottom">
-                                <p>High of ${Math.round(obj[i].maxtemp * (9 / 5) + 32)}°F. Low of ${Math.round(obj[i].mintemp * (9 / 5) + 32)}°F.</p>
+                                <p>High of ${Math.round(obj[i].maxtemp * (9 / 5) + 32)}°F. Low of ${Math.round(obj[i].mintemp * (9 / 5) + 32)}°F. Feels like ${Math.round(obj[i].feelslike * (9 / 5) + 32)}°F.</p>
                             </div>
                         </div>
                     </div>

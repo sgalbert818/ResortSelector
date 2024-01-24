@@ -93,11 +93,29 @@ button img {
     width: 93%;
     height: 450px;
     margin: 30px auto;
-    background-image: url('images/keystone.jpg');
-    background-position: bottom;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+.img-container {
+    background-color: black;
+    width: 100%;
+    height: 450px;
+    position: absolute;
+    z-index: 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.108);
+    border-radius: 10px;
+}
+
+.img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    border-radius: 10px;
 }
 
 .section-top {
@@ -105,6 +123,7 @@ button img {
     width: 93%;
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 
 .section-top h2 {
@@ -124,7 +143,7 @@ button img {
 
 .weather, .traffic {
     height: 90%;
-    width: 47%;
+    width: 48.5%;
 }
 
 .weather {
@@ -140,6 +159,7 @@ button img {
     height: 29%;
     display: flex;
     background-color: white;
+    border-radius: 10px;
 }
 
 .left {
@@ -198,6 +218,7 @@ iframe {
     height: 100%;
     border: none;
     opacity: 0.9;
+    border-radius: 10px;
 }
 
 .address-input,
@@ -233,8 +254,43 @@ form {
     opacity: 1;
 }
 
-@media only screen and (max-width: 650px) {}
+@media only screen and (max-width: 720px) {
+    .section-top {
+        height: 112.5px;
+    }
 
-@media only screen and (min-width: 650px) and (max-width: 820px) {}
+    .section-top h2 {
+        font-size: 3.8vw;
+        letter-spacing: 7px;
+    }
+    
+    .section-bottom {
+        flex-direction: column;
+    }
 
-@media only screen and (min-width: 820px) and (max-width: 1000px) {}
+    .item-container {
+        height: 550px;
+    }
+    
+    .img-container {
+        height: 550px;
+    }
+
+    .weather, .traffic {
+        height: 90%;
+        width: 100%;
+    }
+
+    .weather {
+        margin-bottom: 20px;
+    }
+
+    .right {
+        max-width: 100px;
+        margin-left: 80px;
+    }
+
+    .text-top h4 {
+        padding-bottom: 8px;
+    }
+}
