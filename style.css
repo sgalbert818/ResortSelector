@@ -121,6 +121,7 @@ button img {
 .section-top {
     height: 25%;
     width: 93%;
+    margin-left: 10px;
     display: flex;
     align-items: center;
     z-index: 1;
@@ -167,19 +168,19 @@ button img {
 
 .left {
     height: 100%;
-    width: 70%;
+    width: 75%;
 }
 
 .right {
     height: 100%;
-    width: 30%;
+    width: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .right img {
-    height: 60px;
+    height: 50px;
     width: auto;
 }
 
@@ -292,7 +293,6 @@ form {
 
     .right {
         max-width: 100px;
-        margin-left: 80px;
     }
 
     .text-top h4 {
@@ -323,4 +323,10 @@ form {
         margin-top: 30vh;
     }
 
+}
+
+@media all and (max-width: 450px) {
+    .section-top h2 {
+        font-size: 5vw;
+    }
 }
