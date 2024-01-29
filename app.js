@@ -291,19 +291,7 @@ function fetchWeatherData(obj, startLocation) {
             obj[i].mintemp = response.days[0].tempmin;
             obj[i].conditions = response.days[0].description;
             obj[i].feelslike = response.days[0].feelslike;
-
             obj[i].icon = response.days[0].icon;
-            if (obj[i].icon = 'partly-cloudy-day') {
-                obj[i].icon = 'images/partlycloudy.png';
-            } else if (obj[i].icon = 'clear-day') {
-                obj[i].icon = 'images/sun.png';
-            } else if (obj[i].icon = 'snow') {
-                obj[i].icon = 'images/snow.png';
-            } else if (obj[i].icon = 'rain') {
-                obj[i].icon = 'images/rain.png';
-            } else {
-                obj[i].icon = 'images/cloud.png';
-            }
 
             obj[i].snow = response.days[0].snow;
             if (Math.round(obj[i].snow / 2.54) == 1) {
@@ -332,7 +320,7 @@ function fetchWeatherData(obj, startLocation) {
                             </div>
                         </div>
                         <div class="right">
-                            <img src=${obj[i].icon}>
+                            <img src=${'images/' + obj[i].icon + '.png'}>
                         </div>
                     </div>
                     <div class="temperature">
