@@ -1,7 +1,3 @@
-// WEATHER CROSSING API KEY VGSVU45QFY7FQ3T557YS85XR6
-// MAPS API KEY AIzaSyB2RrRBsMP2YXKOav-FhbI1utuoIpMgzjQ
-// resort info
-
 const resorts = [
     {
         id: 1,
